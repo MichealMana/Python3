@@ -1,4 +1,14 @@
+
 # Method: 1
+from pathlib import Path
+from collections import Counter
+
+file = Path('/home/mana/Work/lines.txt').read_text().splitlines()
+for x,y in Counter(file).items():
+    if y > 1:
+        print(repr(x),'repated',y,'times')    
+        
+# Method: 2
 dt = {}
 with open('dup.txt') as f:
     fl = f.read().splitlines()
@@ -6,11 +16,3 @@ for i in fl: dt[i] = dt.get(i, 0)+1
 for x,y in dt.items():
     if y > 1:
         print(repr(x),'repated',y,'times')
-# Method: 2
-from collections import Counter
-
-with open('dup.txt') as f:
-    fl = f.read().splitlines()
-for x,y in Counter(fl).items():
-    if y > 1:
-        print(repr(x),'repated',y,'times')    
