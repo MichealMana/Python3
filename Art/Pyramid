@@ -1,6 +1,2 @@
-h = 12
-w = 0
-while h > 0 and w < 33 :
-        print(' '*h+'/_\\'+'/_\\'*w)
-        h -= 1
-        w += 1
+for i in range(1,20,2):
+    print(('*'*i).center(20))
