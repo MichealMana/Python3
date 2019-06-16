@@ -1,0 +1,5 @@
+from pathlib import Path
+import re
+
+P = Path('/sys/class/net/')
+[i for i in P.iterdir() if re.search(r'en*|wl*',str(i.name))]
