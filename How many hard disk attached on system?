@@ -1,9 +1,0 @@
-
-import re
-
-h_disk = []
-with open('/proc/partitions') as opn:
-    for disk in opn.readlines():
-        if re.search(r'sd.$',disk):
-            h_disk += [ disk[-4:-1] ]
-print('Number of Disk:',len(h_disk))
