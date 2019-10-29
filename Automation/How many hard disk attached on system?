@@ -1,0 +1,6 @@
+from pathlib import Path
+import re
+
+P = Path('/proc/partitions').read_text().splitlines()
+disk = [i.split()[-1] for i in P if re.search(r'sd.$',i)]
+print('Number of Disk:',len(disk))
