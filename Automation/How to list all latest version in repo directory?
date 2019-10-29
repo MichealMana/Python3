@@ -1,3 +1,34 @@
+###Method:1###
+
+from difflib import get_close_matches
+from pathlib import Path
+import re
+
+print('List of All Packages in Server')
+print('*'*40)
+p = Path('/home/mana/Repo')
+for x in p.iterdir():
+    print(x.name)
+print()
+p = Path('/home/mana/Repo/')
+clt = [x.name for x in p.iterdir()]
+rmel7 = [r.replace('.el7.x86_64.rpm','') for r in clt]
+
+lat = []
+for g in rmel7:
+    if len(get_close_matches(g,clt)) == 2:
+        z = [(t,''.join(re.findall(r'\d{1,}',t)[:-3])) for t in get_close_matches(g,clt)]
+        latest = max(z,key = lambda x: x[1])[0]
+        lat.append(latest)
+print('List of Latest ackages in Server')
+print('*'*40)
+print(*sorted(set(lat)),sep = '\n')
+
+
+
+
+###Method:2#####
+
 from pathlib import Path
 import re
 
