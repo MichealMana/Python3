@@ -1,3 +1,5 @@
+###Method:1###
+
 from pathlib import Path
 
 disk = [p for p in Path('/sys/block').glob('sd[a-z]')]
@@ -5,3 +7,15 @@ disk_dict = {d.name: d.joinpath('size').read_text().strip() for d in disk}
 
 for dev,size in disk_dict.items():
     print('{:15} {:.0f}G'.format('/dev/'+dev, int(size)*512/1e+9))
+
+
+###Method:2###
+
+import os
+import glob
+
+for i in glob.glob('/sys/block/sd*'):
+    sector_size = open(i + '/queue/hw_sector_size').read().strip()
+    sectors = open(i + '/size').read().rstrip('\n')
+    base = '/dev/' + os.path.basename(i)
+    print('{} {:1.0f} GB'.format(base, float(sectors)*float(sector_size)/(1024*1024*1024)))
