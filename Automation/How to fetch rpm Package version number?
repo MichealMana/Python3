@@ -1,0 +1,18 @@
+###How to fetch rpm Package version number?###
+
+from pathlib import Path
+import re
+
+pack = 'GeoIP-1.5.0-14.el7.x86_64.rpm'
+compose = re.compile(r'\d{1,}')
+print('Package Name: ',pack)
+print('Fetch version Number: ',compose.findall(pack)[:-3])
+
+### Fetch package name with version ###
+from pathlib import Path
+import re
+
+p = Path('/home/mana/Repo')
+clt = [x.name for x in p.iterdir()]
+
+[(x.name,re.findall(r'\d{1,}',x.name)[:-3]) for x in p.iterdir()]
