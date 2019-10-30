@@ -1,0 +1,22 @@
+from pathlib import Path
+import re
+
+p = Path('/home/mana/Repo/')
+clt = [x.name for x in p.iterdir()]
+rmel7 = [r.replace('.el7.x86_64.rpm','') for r in clt]
+
+pack = []
+for st in rmel7:
+    if re.match(r'^[a-zA-Z]',st):
+        p1 = re.search(r'^\w+|^\d{1,}',st).group()
+        v1 = re.search(r'\d{1,}.*',st).group()
+        pack += [(p1,v1)]
+    else: 
+        p2 = re.search(r'^(\d{1,}|-\w+).*[a-z]',st).group()
+        rh = re.search(r'-\d{1,}.*',st).group()
+        v2 = re.sub(r'^-','',rh)
+        pack += [(p2,v2)]
+print('{:17}{:>28}'.format('Package-Name','Version')) 
+print('*'*47)
+for a,b in sorted(pack):
+    print('{:17}{:>30}'.format(a,b))
