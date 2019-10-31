@@ -4,7 +4,7 @@ import platform
 print('Os:',*platform.dist())
 q = Path('/proc/cpuinfo').read_text().splitlines()
 cpu = [j for j in q if j.startswith('model name')]
-print('CPU',cpu[0].replace('model name',''))
+print('CPU',cpu[0].replace('model name','').replace('\t',''))
 r = Path('/proc/meminfo').read_text().splitlines()
 mem = [k for k in r if k.startswith('MemTotal')]
 print('Memory Size:',round(int(mem[0].split()[1])/1024/1024), 'GB')
