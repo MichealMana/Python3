@@ -1,8 +1,0 @@
-### How to make dictionary from two list? ###
-
-name = ['Ram','Rex','Rani','Micheal']
-age = [34, 25, 27, 31]
-dict(zip(name,age))
-
-Output:
-{'Ram': 34, 'Rex': 25, 'Rani': 27, 'Micheal': 31}
