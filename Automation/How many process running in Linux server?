@@ -1,0 +1,4 @@
+from pathlib import Path
+
+P = Path('/proc').glob('[0-9]*')
+len(list(P))
