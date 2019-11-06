@@ -1,0 +1,5 @@
+from pathlib import Path
+
+P = Path('/etc/passwd').read_text().splitlines()
+comma = [i.replace(':',',') for i in P]
+print(*comma,sep='\n',file = open('/home/mana/Work/user.csv','w'))
