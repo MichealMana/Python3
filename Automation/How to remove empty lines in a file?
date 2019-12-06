@@ -1,0 +1,5 @@
+from pathlib import Path
+
+f = Path('/home/mana/Work/user.txt').read_text().splitlines()
+lr = [i for i in f if i]
+print(*lr, sep = '\n', file = open('/home/mana/Work/user1.txt','w'))
