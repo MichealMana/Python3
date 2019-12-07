@@ -1,8 +1,0 @@
-from pathlib import Path
-import difflib
-
-f1 = Path('/home/mana/Work/file1.txt').read_text().splitlines()
-f2 = Path('/home/mana/Work/file2.txt').read_text().splitlines()
-
-diff = difflib.Differ().compare(f1,f2)
-print(*diff, sep = '\n')
