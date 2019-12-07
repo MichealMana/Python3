@@ -1,0 +1,5 @@
+data = [('wlp2s0', 'up'), ('wlp2s0', '1')]
+di ={}
+for dev,state in data:  
+    di.setdefault(dev, []).append(state)
+di
