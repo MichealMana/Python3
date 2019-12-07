@@ -1,8 +1,0 @@
-from datetime import datetime
-
-start_date = '22-07-2019'
-today = datetime.today()
-con_date = datetime.strptime(start_date,'%d-%m-%Y')
-date_diff = con_date - today
-# Calculate expiry date
-print('Expire {0} days'.format(date_diff.days))
