@@ -1,8 +1,0 @@
-from datetime import date
-
-d=("2019-12-31","2020-12-31","2021-12-31","2018-12-27","2022-12-31")
-h = format(date.today())
-if h in d:
-    print('Yes')
-else:
-    print('No')
