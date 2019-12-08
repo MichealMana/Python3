@@ -1,0 +1,5 @@
+from pathlib import Path
+import re
+
+P = Path('/proc/mdstat').read_text().splitlines()
+[i.split()[3] for i in P if re.search(r'active',i)]
