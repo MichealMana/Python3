@@ -1,0 +1,6 @@
+
+l=[('girls',4),('boys',5),('girls',10)]
+age = {}
+for x,y in l:
+    age.setdefault(x,[]).append(y)
+[{j:sum(age[j])} for j in age]
