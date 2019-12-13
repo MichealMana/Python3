@@ -1,0 +1,6 @@
+dica={0:[10],1:[20],2:[30]}
+lista=[16,11,24,25]
+temp_dict = {v[0]:k for k,v in dica.items()}
+for num in lista:
+    dica[temp_dict[min(temp_dict, key=lambda x:abs(x-num-1))]].append(num)
+print(dica)
