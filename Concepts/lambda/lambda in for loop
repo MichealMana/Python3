@@ -1,0 +1,10 @@
+lista=[16,11,24,25]
+dica={0:[10],1:[20],2:[30]}
+k=[dica[k][0] for k in dica]
+fa=lambda num: [abs(x-num-1) for x in k]
+fb=lambda z: z.index(min(z))
+for num in lista: dica[fb(fa(num))].append(num)
+print(dica)
+
+# Output:
+# {0: [10, 11], 1: [20, 16, 24], 2: [30, 25]}
