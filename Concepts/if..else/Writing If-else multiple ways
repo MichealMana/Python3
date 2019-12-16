@@ -1,0 +1,20 @@
+Method: 1
+
+score = 46
+  
+  if score > 35:
+    print("Passed")
+  else:
+    print("Fail")
+    
+Method: 2
+
+score = 46
+  
+  result = "Passed" if scored > 35 else "Fail"
+  
+ Method: 3
+ 
+ score = 46
+  
+  result = scored > 35 and "Passed" or "Fail"
