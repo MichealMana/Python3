@@ -1,0 +1,5 @@
+from pathlib import Path
+
+file = Path('/etc/hosts').read_text().splitlines()
+ip_filter = [ip.split()[0] for ip in file if '#' not in ip and ip]
+print(*ip_filter, sep = '\n')
