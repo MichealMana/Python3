@@ -1,0 +1,13 @@
+s = 'Explict is better than implict.'
+ln = len(s)
+space = ln - 2
+lastpos = ln - 1
+size = ln//2 if ln  % 2 == 0 else ln//2+1
+
+for i in range(size):
+    if i == lastpos:
+        print(' '*i+s[i])
+    else:
+        print(' '*i+s[i]+' '*space+s[lastpos])
+    lastpos -= 1
+    space -= 2
