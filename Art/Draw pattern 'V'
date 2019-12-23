@@ -1,4 +1,4 @@
-s = 'Explict is better than implict.'
+s = 'v'*16
 ln = len(s)
 space = ln - 2
 lastpos = ln - 1
