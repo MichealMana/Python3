@@ -1,7 +1,7 @@
-from pathlib import Path
 from os import statvfs as svfs
-import re
+from pathlib import Path
 import bisect
+import re
 
 #size = [1, 1e+3, 1e+6, 1e+9]      ## GB
 size = [1, 2**10, 2**20, 2**30]  ## GiB
