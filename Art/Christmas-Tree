@@ -19,6 +19,7 @@ print(' '*32, end = '\====/')
 print('')
 
 ### Method:3 ###
+import numpy as np
 x = np.arange(7,16)
 y = np.arange(1,18,2)
 z = np.column_stack((x[::-1],y))
