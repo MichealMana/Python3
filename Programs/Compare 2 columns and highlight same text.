@@ -1,3 +1,5 @@
+from  pathlib import Path
+
 f1 = Path('/home/mana/Work/risi.csv').read_text().splitlines()
 for i in f1:
     s = i.split(',')
