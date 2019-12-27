@@ -1,0 +1,7 @@
+f1 = Path('/home/mana/Work/risi.csv').read_text().splitlines()
+for i in f1:
+    s = i.split(',')
+    com = set(s[0].split()) & set(s[1].split())
+    print(s[0].replace(' '.join(com),'<span style="color: red">{}</span>'
+                       .format(' '.join(com))), file = open('/home/mana/Work/diff.html','w'))
+    
