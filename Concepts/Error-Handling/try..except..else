@@ -1,6 +1,30 @@
+Definiation:
+
+Else part must be excecuted. if the try clause does not raise an exception.
+
+
+### Example: 1 ###
+
 try:
-        result = 10 / 2
-    except ZeroDivisionError:
-        print("division by zero!")
+    result = 10 / 2
+except ZeroDivisionError:
+    print("division by zero!")
+else:
+    print("result is", result)
+
+### Example: 2 ###
+
+# This program is to check user exists or not in Linux System.
+import pwd
+
+def user_chk(user):
+    try:
+        pwd.getpwnam(user)[0] == user
+    except KeyError:
+        print('User {!r} not exists.'.format(user))
     else:
-        print("result is", result)
+        print('User {!r} exists.'.format(user))
+        
+
+user_chk('mana')
+user_chk('arul')
