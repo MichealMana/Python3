@@ -1,4 +1,0 @@
-from pathlib import Path
-
-P = Path('/home/mana/Work/fruit1.txt').read_text()
-print(len(list(P)))
