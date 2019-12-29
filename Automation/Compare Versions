@@ -6,6 +6,7 @@ import sys
 print(sys.version_info)
 sys.version_info > (3, 6, 4)
 
+# Example: 2
 version1 = '3.6.7'
 version2 = '3.6.4'
 v1 = tuple([int(i) for i in version1.split('.')])
