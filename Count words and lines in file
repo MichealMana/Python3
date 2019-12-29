@@ -1,4 +1,0 @@
-with open('test.txt') as fo:
-    fr = fo.read()
-    print('This file contains {} words.'.format(len(fr.split())))
-    print('This file contains {} lines.'.format(len(fr.splitlines())))
