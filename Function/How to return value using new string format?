@@ -1,0 +1,6 @@
+sentence = 'Linux is good Operating system.'
+
+def up_low(*args):
+    lower = [i for i in list(args) if i.islower()]
+    return  f'upper is {len(args)-len(lower)}, and lower is {len(lower)}'
+up_low(*sentence.split())
