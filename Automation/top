@@ -1,6 +1,17 @@
+### Method:1 ###
+
 from subprocess import check_output
 
-cmd = 'top -bn2 -d1'
+cmd = 'top -bn1'
+out = check_output(cmd.split()).decode().splitlines()
+print(*out,sep='\n')
+
+### Method:2 ###
+
+from subprocess import check_output
+
+cmd = 'top -bn2'
 out = check_output(cmd.split()).decode().splitlines()
 line = [i for i,j in enumerate(out) if 'top -' in j]
 print(*out[line[1]::], sep = '\n')
+
