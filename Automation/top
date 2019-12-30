@@ -1,0 +1,6 @@
+from subprocess import check_output
+
+cmd = 'top -bn2 -d1'
+out = check_output(cmd.split()).decode().splitlines()
+line = [i for i,j in enumerate(out) if 'top -' in j]
+print(*out[line[1]::], sep = '\n')
