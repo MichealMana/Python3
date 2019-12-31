@@ -1,0 +1,4 @@
+from pathlib import Path
+lines = Path('/home/mana/Work/user.txt').read_text().splitlines()
+convert = [','.join(i.split()) for i in lines]
+print(*convert, sep = '\n', file = open('/home/mana/Work/user.csv','w'))
