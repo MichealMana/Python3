@@ -1,0 +1,5 @@
+def f(x):
+    return g(x)+5*2
+def g(x):
+    return x+2
+f(g(1))
