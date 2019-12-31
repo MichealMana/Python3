@@ -1,3 +1,5 @@
+### In the print function you are calling nested functions, the first function to be called is g passing 1 as an argument.
+
 def f(x):
     return g(x)+5*2
 def g(x):
