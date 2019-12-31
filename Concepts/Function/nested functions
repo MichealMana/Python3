@@ -1,0 +1,9 @@
+def outer(x,y):
+    z = x + y
+    def inner():
+        total = z + 1
+        def inner_of_inner():
+            print(total - 1)
+        return inner_of_inner()
+    inner()
+outer(2,3)
