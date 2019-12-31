@@ -1,0 +1,5 @@
+def add(x, y):
+    return x + y
+
+fn_obj = add
+fn_obj(3, 4)
