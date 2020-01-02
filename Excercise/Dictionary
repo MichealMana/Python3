@@ -1,5 +1,0 @@
-What will get output after run this code?
-
-a = {0:0}
-del a[0]
-a[0] = 0
