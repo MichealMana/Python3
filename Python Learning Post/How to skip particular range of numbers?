@@ -1,6 +1,0 @@
-4257, n=2 => 57
-
-Here, I skip 2 to 57.
-
-
-[n for n in range(4257) if not n >=2 or n >= 57 ]
