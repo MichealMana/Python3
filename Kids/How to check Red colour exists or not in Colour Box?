@@ -1,6 +1,0 @@
-
-color_box = ['Black', 'White', 'Gray', 
-             'Red', 'Orange', 'Yellow', 
-             'Green', 'Pink', 'Brown']
- 
-'Red' in color_box
