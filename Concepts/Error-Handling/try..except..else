@@ -13,6 +13,14 @@ else:
     print("result is", result)
 
 ### Example: 2 ###
+try:
+    file = open('/home/mana/Work/user.txt') 
+except FileNotFoundError:
+    print('File not found')
+else:
+    print(*file.readlines(), sep = '\n')
+
+### Example: 3 ###
 
 # This program is to check user exists or not in Linux System.
 import pwd
