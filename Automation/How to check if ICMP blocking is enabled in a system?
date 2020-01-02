@@ -1,0 +1,9 @@
+from pathlib import Path
+
+value = Path('/proc/sys/net/ipv4/icmp_echo_ignore_all').read_text()
+
+if int(value) == 0:
+    print("ICMP protocol enabled.")
+else:
+    print('"ICMP protocol disabled."')
+    
