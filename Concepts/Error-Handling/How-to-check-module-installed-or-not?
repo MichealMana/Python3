@@ -1,8 +1,9 @@
 try:
     import keras
-    print(keras)
 except ModuleNotFoundError as p:
     print(p, 'Install Module.')
+else:
+    print('Already module installed.')
     
 ### Output ###
 No module named 'keras' Install Module.
