@@ -1,0 +1,7 @@
+Use sys.executable to ensure that you will call the same pip associated with the current runtime.
+
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
