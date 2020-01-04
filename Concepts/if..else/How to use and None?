@@ -1,0 +1,4 @@
+if len(st) >= 7 and 0:
+    print('Strong')
+else:
+    print('Weak')
