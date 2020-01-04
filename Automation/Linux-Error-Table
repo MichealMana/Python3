@@ -1,0 +1,8 @@
+import errno
+import os
+
+print('{:<10} {:^14} {:>15}'.format('Error-Code','Error-Symbol','Error-Message'))
+for x,y in sorted(errno.errorcode.items()):
+    print('{:^5} {:^20} {:<35}'.format(x, y, os.strerror(x)))
+    
+   
