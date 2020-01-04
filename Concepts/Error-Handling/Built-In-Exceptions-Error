@@ -9,7 +9,6 @@ for i,j,k in zip(*[iter(match_splt)] *3):
     print('{:<25} {:<20} {:<20}'.format(i, j, k))
 
 
-
 ### Method:2 ###
 import re
 colllectError = []
