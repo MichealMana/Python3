@@ -4,12 +4,11 @@ import re
 
 match = re.findall(r'^[AZ].*[EW]', ' '.join(dir(__builtins__)))
 match_splt = match[0].split()
-extra = ['False', 'True', 'None']
+extra = ['False', 'True', 'None', 'Ellipsis']
 final = sorted(list(set(match_splt) - set(extra)))
 
 for i,j,k in zip(*[iter(final)] *3):
     print('{:<25} {:<20} {:<20}'.format(i, j, k))
-
 
 ### Method:2 ###
 import re
