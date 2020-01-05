@@ -1,11 +1,10 @@
 from bisect import bisect
 
-marks = [0, 35, 50, 70, 100]
-grade = ['E', 'D', 'C', 'B', 'A']
+marks = [0, 40, 60, 80]
+grade = ['D', 'C', 'B', 'A']
 
-def cal_grade(m):
-    idx = bisect(marks, m) -1
-    return grade[idx]+" Grade."
+def display_grade(num):
+    idx = bisect(marks, num) - 1
+    return f'{grade[idx]} Grade' 
 
-inp = int(input('Enter Mark: '))
-cal_grade(inp)
+display_grade(65)   
