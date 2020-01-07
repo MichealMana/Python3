@@ -1,3 +1,0 @@
-# How to check number within 0 to 100?
-
-print('valid Values' if 0 <= 40 <=100 else 'Not Valid values')
