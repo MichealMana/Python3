@@ -1,0 +1,6 @@
+## Example: 1 ##
+name = 'Manavalan'
+d = {}
+for i in name:
+    d[i] = d.get(i,0)+1
+d
