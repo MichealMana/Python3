@@ -1,3 +1,5 @@
+The get() method returns the value for the specified key if key is in dictionary.
+
 ## Example: 1 ##
 name = 'Manavalan'
 d = {}
