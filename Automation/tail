@@ -1,0 +1,5 @@
+from collections import deque
+from pathlib import Path
+
+lines = Path('/etc/passwd').read_text().splitlines()
+print(*deque(lines, 5), sep = '\n')
