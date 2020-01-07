@@ -1,3 +1,11 @@
+## Example: 1 ##
+name = 'Manavalan'
+d = {}
+for i in name:
+    d.setdefault(i, []).append(i)
+d
+
+## Example: 2 ##
 data = [('wlp2s0', 'up'), ('wlp2s0', '1')]
 di ={}
 for dev,state in data:  
