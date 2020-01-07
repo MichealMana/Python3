@@ -1,0 +1,4 @@
+import os
+
+file = '/home/mana/Work/user.csv'
+print(os.stat(file).st_ino, file)
