@@ -3,6 +3,7 @@ from collections import Counter
 from pathlib import Path
 from os import environ
 
+home = environ['HOME']
 lines = Path(home+'/.bash_history').read_text().splitlines()
 commands = [x.split()[0] for x in lines if x]
 result = Counter(commands).most_common(10)
@@ -15,6 +16,7 @@ from pathlib import Path
 from os import environ
 
 dcommand = {}
+home = environ['HOME']
 lines = Path(home+'/.bash_history').read_text().splitlines()
 for x in lines:
     if x:
