@@ -1,0 +1,38 @@
+### Method: 1 ###
+from collections import Counter
+from pathlib import Path
+from os import environ
+
+lines = Path(home+'/.bash_history').read_text().splitlines()
+commands = [x.split()[0] for x in lines if x]
+result = Counter(commands).most_common(10)
+
+for i,j in result:
+    print(f'{i:10} {j}') 
+
+### Method: 2 ###
+from pathlib import Path
+from os import environ
+
+dcommand = {}
+lines = Path(home+'/.bash_history').read_text().splitlines()
+for x in lines:
+    if x:
+        splt = x.split()[0]
+        dcommand[splt] = dcommand.get(splt, 0)+1
+
+result = sorted(dcommand.items(), key = lambda x: x[1], reverse = True)[0:10]
+for i,j in result:
+    print(i,j) 
+
+### Method: 3 ###
+from collections import Counter
+from os import environ
+from re import findall
+
+home = environ['HOME']
+compose = findall(r'.*', open(home+'/.bash_history').read())
+commands = [x.split()[0] for x in compose if x]
+result = Counter(commands).most_common(10)
+for i,j in result:
+    print(i,j)
