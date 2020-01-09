@@ -1,0 +1,3 @@
+open('/home/mana/Work/user.txt').read()
+
+open('/home/mana/Work/user.txt').readlines()
