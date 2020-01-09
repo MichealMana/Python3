@@ -1,0 +1,6 @@
+Example: 1
+
+'1 2 3'.split(maxsplit=1)
+
+Output:
+['1', '2 3']
