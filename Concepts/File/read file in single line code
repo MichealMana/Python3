@@ -1,3 +1,7 @@
 open('/home/mana/Work/user.txt').read()
 
 open('/home/mana/Work/user.txt').readlines()
+
+### How to split lines in a file? ###
+list(map(str.split, open('/home/mana/Work/user.txt').readlines()))
+open('/home/mana/Work/user.txt').close()
