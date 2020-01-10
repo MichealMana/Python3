@@ -5,11 +5,4 @@ p = Path('/home/mana/Work/tmp.txt').read_text().splitlines()
 max(p)
 
 ### Method: 2 ###
-from pathlib import Path
-
-p = Path('/home/mana/Work/tmp.txt').read_text().splitlines()
-line = [(i, len(j.split()), j) for i,j in enumerate(p,1)]
-srt = sorted(line, key = lambda x: x[1])[-1]
-print('{0!r:}th line is longest line. It contains {1!r:} words.'.format(*srt))
-print('')
-print(srt[-1])
+print(max(open('/home/mana/Work/fruit2.txt'), key=len))
