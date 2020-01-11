@@ -1,0 +1,10 @@
+from pathlib import Path
+    
+dpath = Path('/home/mana/Work')
+fsize = [(i,i.stat().st_size) for i in dpath.iterdir() if i.is_file()]
+
+print("Follwing files are reomoved:")
+for x,y in fsize:
+    if y >= 1e+7 and x.suffix in ['.tar', '.zip', '.pdf']:
+        print(x.name)
+        x.unlink()
