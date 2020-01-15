@@ -1,0 +1,6 @@
+Matrix Addition and Matrix Multiplication
+A + B = B + A (Commutative law of addition)
+A + B + C = A + ( B + C ) = ( A + B ) + C (Associative law of addition)
+ABC = A( BC ) = ( AB )C (Associative law of multiplication)
+A( B + C ) = AB + AC (Distributive law of matrix algebra)
+x( A + B ) = xA + xB.
