@@ -1,0 +1,6 @@
+from subprocess import check_output
+from re import findall
+
+cmd = 'date --help'
+out = check_output(cmd.split())
+print(*findall(r'\s{2}%.*', out.decode()), sep = '\n')
