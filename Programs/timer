@@ -1,0 +1,6 @@
+from time import sleep
+sec = int(input('Select seconds:'))
+print(sec)
+for t in range(sec,-1,-1):
+    print(t, end = '\f\r')
+    sleep(1)
