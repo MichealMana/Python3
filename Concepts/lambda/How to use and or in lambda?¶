@@ -1,0 +1,1 @@
+(lambda a,b : a > b and a or b)(10, 5)
