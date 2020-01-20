@@ -1,0 +1,11 @@
+from datetime import datetime
+from pathlib import Path
+import tarfile
+
+dpath = '/home/mana/Work/'
+log_file = Path('/var/log/syslog').read_text().splitlines()
+today = datetime.today().strftime('%b %d')
+current_date_log = [i for i in log_file if i.startswith(today)]
+print(*current_date_log, sep = '\n', file = open(dpath+'log.txt', 'w'))
+with tarfile.open('/home/mana/Work/log.tar.gz', "w:gz") as tar:
+    tar.add(dpath+'log.txt', arcname=Path(dpath+'log.txt').name)
