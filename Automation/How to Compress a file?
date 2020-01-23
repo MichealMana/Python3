@@ -1,0 +1,5 @@
+from pathlib import Path
+import tarfile
+
+with tarfile.open('/home/mana/Work/test.tar.gz', "w:gz") as tar:
+    tar.add('/home/mana/Work/test.txt', arcname=Path('/home/mana/Work/test.txt').name)
