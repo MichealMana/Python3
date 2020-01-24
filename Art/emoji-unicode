@@ -1,0 +1,4 @@
+https://unicode.org/emoji/charts/full-emoji-list.html
+
+Example:
+chr(int('1F60B', base = 16))
