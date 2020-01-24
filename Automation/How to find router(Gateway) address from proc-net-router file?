@@ -2,6 +2,6 @@ from pathlib import Path
 from re import findall
 
 route = Path('/proc/net/route').read_text().splitlines()[1]
-hex_addr = route.split('\t')[2]
-hex_base = [str(int(x, base=16)) for x in findall(r'..',hex_addr)[::-1]]
+hex_addr = findall(r'..',route.split('\t')[2])[::-1]
+hex_base = [str(int(x, base=16)) for x in hex_addr]
 print('.'.join(hex_base))
