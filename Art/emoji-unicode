@@ -7,3 +7,6 @@ chr(int('1F60B', base = 16))
 
 ### How to print unicode Character? ###
 print(u"\U0001F9DE")
+
+### Down Emoji ###
+print(u"\U0001F44E")
