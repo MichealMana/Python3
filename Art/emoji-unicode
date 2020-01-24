@@ -5,4 +5,5 @@ https://www.iemoji.com/view/emoji/2654/smileys-people/woman-genie
 Example:
 chr(int('1F60B', base = 16))
 
+### How to print unicode Character? ###
 print(u"\U0001F9DE")
