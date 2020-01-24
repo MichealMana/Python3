@@ -1,0 +1,10 @@
+from subprocess import check_output
+
+def uptime(x = ''):
+    cmd = 'uptime -' + x
+    out = check_output(cmd.split()).decode()
+    return out
+
+print('How long the system has been running?\n',uptime())
+print('Show uptime in pretty format:\n', uptime('p'))
+print('System up since:\n',uptime('s'))
