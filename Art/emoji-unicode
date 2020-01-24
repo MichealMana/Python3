@@ -1,4 +1,6 @@
 https://unicode.org/emoji/charts/full-emoji-list.html
 
+https://www.iemoji.com/view/emoji/2654/smileys-people/woman-genie
+
 Example:
 chr(int('1F60B', base = 16))
