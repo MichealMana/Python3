@@ -1,0 +1,9 @@
+Maximum Subarray Problem:
+Simple idea of the Kadane's algorithm is to look for all positive contiguous segments of the array.
+
+The maximum subarray problem is the task of finding the largest possible sum of a contiguous subarray, 
+within a given one-dimensional array A[1…n] of numbers.
+
+-2 1 - 3 4 -1 2 1 -5 4
+
+For example, for the array given above, the contiguous subarray with the largest sum is [4, -1, 2, 1], with sum 6.
