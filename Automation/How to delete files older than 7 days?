@@ -13,6 +13,7 @@ for x in glob('/home/mana/Work/*'):
 from datetime import date
 from pathlib import Path
 
-for x in Path('/home/mana/Work/').glob('*'):
+for x in Path('/home/mana/Work/').glob('*.txt'):
     if (date.today() - date.fromtimestamp(x.stat().st_mtime)).days > 7:
-        print('This file 
+        print('This file will be remove:',x)
+        x.unlink()
