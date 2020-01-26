@@ -1,14 +1,18 @@
-from pathlib import Path
+## Python 2.7 ##
+
+from os import remove,stat
 from datetime import date
+from glob import glob
 
-today = date.today()
-p = Path('/home/mana/Temp/task')
-fm = [(i, today - date.fromtimestamp(i.stat()[-2]))
-      for i in p.iterdir()]
+for x in glob('/home/mana/Work/*'):
+    if (date.today() - date.fromtimestamp(os.stat(x).st_mtime)).days > 7:
+        print('This file will be remove:',x)
+        os.remove(x)
+        
+## Python 3 ##
+from datetime import date
+from pathlib import Path
 
-for x,y in fm:
-    if y.days > 7:
-        print(x)
-        x.unlink() 
-else:
-    print('Above files are deleted.')
+for x in Path('/home/mana/Work/').glob('*'):
+    if (date.today() - date.fromtimestamp(x.stat().st_mtime)).days > 7:
+        print('This file 
