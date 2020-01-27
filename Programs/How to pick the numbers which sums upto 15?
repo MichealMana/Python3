@@ -1,14 +1,12 @@
-from itertools import permutations
+from itertools import combinations
 from functools import reduce
 from operator import add
 
 lst_nums = [1, 2, 17, 14, 5, 3, 7, 12, 3, 8, 4, 9]
-sum = 3
-
+sum = 15
 for i in range(1,len(lst_nums)):
-    x = list(permutations(lst_nums, i))
+    x = list(combinations(lst_nums, i))
     for y in x:
         tmp = reduce(add, y)
         if tmp == sum:
             print(*y)
-            break
