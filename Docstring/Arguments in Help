@@ -1,0 +1,24 @@
+
+from functools import reduce
+
+help(reduce)
+
+Help on built-in function reduce in module _functools:
+
+reduce(...)
+    reduce(function, sequence[, initial]) -> value
+
+Here, 2 argument must.
+
+************************************************************
+from itertools import accumulate
+
+help(accumulate)
+
+Help on class accumulate in module itertools:
+
+class accumulate(builtins.object)
+   accumulate(iterable[, func]) --> accumulate object
+
+Here, 1 is constructor another one is optional argument must.
+
