@@ -1,0 +1,5 @@
+lst = [[12, 3, 8, 4, 3], [3, 8, 4, 3], [8, 4, 3]]
+list(set.intersection(*map(set, lst))) 
+
+Out:
+[8, 3, 4]
