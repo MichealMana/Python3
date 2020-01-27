@@ -1,0 +1,9 @@
+# Method: 1
+lst = [[12, 3, 8, 4, 3], [3, 8, 4, 3], [8, 4, 3]]
+list(set.intersection(*map(set, lst))) 
+
+# Method: 2
+from functools import reduce
+
+lst = [[12, 3, 8, 4, 3], [3, 8, 4, 3], [8, 4, 3]]
+list(reduce(lambda i, j: i & j, (set(x) for x in lst))) 
