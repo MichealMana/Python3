@@ -1,0 +1,25 @@
+from itertools import accumulate, permutations
+from functools import reduce
+from operator import add
+
+lst_nums = [1, 2, 17, 14, 5,3, 7, 12, 3, 8, 4, 9, 7]
+lst = []
+sum = 15
+
+for i in range(len(lst_nums)):
+    for x in list(accumulate(lst_nums[i:], add)):
+        if x == sum:
+            lst.append(lst_nums[i:])
+            
+nums = list(reduce(lambda i, j: i & j, (set(x) for x in lst))) 
+tmp1 = reduce(add, nums)
+if tmp1 == sum:
+    print(*nums)
+else:
+    for i in range(1,len(nums)):
+        x = list(permutations(nums, i))
+        for y in x:
+            tmp2 = reduce(add, y)
+            if tmp2 == sum:
+                print(*y)
+                break
