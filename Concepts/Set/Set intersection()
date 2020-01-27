@@ -1,0 +1,19 @@
+The intersection() method returns a new set with elements that are common to all sets.
+
+Ex:1
+A = {1, 2, 3, 4}
+B = {2, 3, 4,  9}
+
+A.intersection(B)
+
+Out:
+{2, 3, 4}
+
+Ex:2
+A = {1, 2, 3, 4}
+B = {2, 3, 4,  9}
+C = {2, 4, 9, 10}
+
+set.intersection(A,B,C)
+Out:
+{2, 4}
