@@ -1,11 +1,9 @@
 ## Method:1 ##
-from pwd import getpwall
+methods = [i for i in dir(str) if not i.startswith('_')]
+fmt = '{:15s}'*4
 
-users = [i[0] for i in getpwall()]
-fmt = '{:18}'*4
-
-for user in zip(*[iter(users)] *4):
-    print(fmt.format(*user))
+for fn in zip(*[iter(methods)] *4):
+    print(fmt.format(*fn))
 
 ##Method 2: ###
 Create table format:
