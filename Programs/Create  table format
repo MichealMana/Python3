@@ -1,3 +1,13 @@
+## Method:1 ##
+from pwd import getpwall
+
+users = [i[0] for i in getpwall()]
+fmt = '{:18}'*4
+
+for user in zip(*[iter(users)] *4):
+    print(fmt.format(*user))
+
+##Method 2: ###
 Create table format:
 hfmt = '{:18s}' + ('  {:>5}' * 6)
 print(hfmt.format('Name', 'File', 'Dir', 'Link', 'FIFO', 'Block', 'Character'))
@@ -5,6 +15,7 @@ print(hfmt.format('Name', 'File', 'Dir', 'Link', 'FIFO', 'Block', 'Character'))
 Output:
 Name                 File    Dir   Link   FIFO  Block  Character
 
+##Method:4 ##
 Beautiful format
 How to format the output using zip and iter method?
 lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
