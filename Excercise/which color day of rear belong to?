@@ -1,0 +1,7 @@
+Assign 7 colors to 5 weekdays, i.e., excluding weekends. 
+What will be the color after 35 days? 
+Colors: blue, green, pink, red, orange, purple, black
+
+colors = ['blue', 'green', 'pink', 'red', 'orange', 'purple', 'black']
+day = colors*52
+day[52]
