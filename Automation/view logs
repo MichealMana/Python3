@@ -10,15 +10,14 @@ now = datetime.now()
 
 def ftime():
     convert_date = datetime.strptime(dtime, "%b %d %H:%M:%S")
-    out = convert_date.strftime("%b %e %H:%M")
-    return out
-    
+    return convert_date.strftime("%b %e %H:%M")
+        
 times = [(now - timedelta(minutes=x)).strftime("%b %e %H:%M") 
      for x in range(inpm)]
 logs = Path('/var/log/syslog').read_text().splitlines()
 
 for line in logs:
-    time_seq = re.match(r'.*'+inpt+'.*', line)
+    time_seq = re.match(r'.*'+inpt+'.*', line, re.I)
     if time_seq:
         dtime = ' '.join(time_seq.group().split()[:3])
         if ftime() in times:
