@@ -1,17 +1,27 @@
-## How To View Logs In Specific Time By Particular Text? ##
+## How To View Logs In Last Specific Time By Particular Text? ##
 
 from datetime import datetime,timedelta
 from pathlib import Path
 import re
 
-inpm = int(input('Enter Minutes:'))
-inpt = input('Enter Search Text:')
+inpm = int(input('Enter Minutes: '))
+inpt = input('Enter Search Text: ')
 now = datetime.now()
+
+def ftime():
+    convert_date = datetime.strptime(dtime, "%b %d %H:%M:%S")
+    out = convert_date.strftime("%b %e %H:%M")
+    return out
+    
 times = [(now - timedelta(minutes=x)).strftime("%b %e %H:%M") 
      for x in range(inpm)]
 logs = Path('/var/log/syslog').read_text().splitlines()
+
 for line in logs:
-    time_seq = re.match(r'\w{3}\s\d{1,2}\s\d{1,2}:\d{1,2}', line)
-    if time_seq.group() in times:
-        if re.search(r''+time_seq.group()+'.*'+inpt+'', line):
-            print(line)
+    time_seq = re.match(r'.*'+inpt+'.*', line)
+    if time_seq:
+        dtime = ' '.join(time_seq.group().split()[:3])
+        if ftime() in times:
+            print(time_seq.group())
+
+
