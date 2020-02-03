@@ -1,4 +1,5 @@
 
+## Method: 1 ###
 The easiest way to copy files from one server to another over ssh is to use the scp command. For calling scp you'd need the subprocess module. For example,
 
 import subprocess
@@ -8,6 +9,7 @@ You need the waitpid call to wait for the copying to complete.
 
 Another solution is to open a ssh connection and use the scp module. For example,
 
+## Method: 2 ###
 from paramiko import SSHClient
 from scp import SCPClient
 ssh = SSHClient()
@@ -15,3 +17,34 @@ ssh.load_system_host_keys()
 ssh.connect('user@server:path')
 with SCPClient(ssh.get_transport()) as scp:
     scp.put('my_file.txt', 'my_file.txt') # Copy my_file.txt to the server
+    
+## Method: 3 ##
+import os
+import paramiko
+paramiko.util.log_to_file('/tmp/paramiko.log')
+paramiko.util.load_host_keys(os.path.expanduser('~/.ssh/known_hosts'))
+
+host = 'local'
+port = 22
+username = 'user'
+
+files = ['file1', 'file2', 'file3', 'file4']
+remote_images_path = '/remote_path/images/'
+local_path = '/tmp/'
+
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(
+            paramiko.AutoAddPolicy())
+ssh.connect(hostname=host, port=port, username=username)
+sftp = ssh.open_sftp()
+
+for file in files:
+    file_remote = remote_images_path + file
+    file_local = local_path + file
+
+    print file_remote + '>>>' + file_local
+
+    sftp.get(file_remote, file_local)
+
+sftp.close()
+ssh.close()
