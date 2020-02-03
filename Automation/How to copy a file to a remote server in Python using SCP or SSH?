@@ -1,0 +1,17 @@
+
+The easiest way to copy files from one server to another over ssh is to use the scp command. For calling scp you'd need the subprocess module. For example,
+
+import subprocess
+p = subprocess.Popen(["scp", "my_file.txt", "username@server:path"])
+sts = os.waitpid(p.pid, 0)
+You need the waitpid call to wait for the copying to complete.
+
+Another solution is to open a ssh connection and use the scp module. For example,
+
+from paramiko import SSHClient
+from scp import SCPClient
+ssh = SSHClient()
+ssh.load_system_host_keys()
+ssh.connect('user@server:path')
+with SCPClient(ssh.get_transport()) as scp:
+    scp.put('my_file.txt', 'my_file.txt') # Copy my_file.txt to the server
