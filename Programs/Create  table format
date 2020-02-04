@@ -35,3 +35,26 @@ for x, y in enumerate(words, 1):
     print(f'{y:12s}', end =' ')
     if x%3 == 0:
         print()
+        
+ ## Print categorize ##
+ from itertools import permutations
+
+def show(iterable):
+    first = None
+    for i, item in enumerate(iterable, 1):
+        if first != item[0]:
+            if first is not None:
+                print()
+            first = item[0]
+        print(''.join(item), end=' ')
+    print()
+
+
+print('All permutations:\n')
+show(permutations('abcd'))  
+
+Output:
+abcd abdc acbd acdb adbc adcb 
+bacd badc bcad bcda bdac bdca 
+cabd cadb cbad cbda cdab cdba 
+dabc dacb dbac dbca dcab dcba 
