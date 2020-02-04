@@ -7,3 +7,13 @@ from functools import reduce
 
 lst = [[12, 3, 8, 4, 3], [3, 8, 4, 3], [8, 4, 3]]
 list(reduce(lambda i, j: i & j, (set(x) for x in lst))) 
+
+# Method: 3
+from itertools import product
+
+lst1 = [1, 2, 4, 7, 5]
+lst2 = [1, 2, 3, 4, 7, 6]
+
+for i, j in product(lst1, lst2):
+    if i == j:
+        print(i, end = ', ')
