@@ -1,0 +1,20 @@
+from datetime import datetime,timedelta
+from pathlib import Path
+
+def ftime():
+    convert_date = datetime.strptime(dtime, "%b %d %H:%M:%S")
+    return convert_date.strftime("%b %e %H:%M")
+
+start_time = 'Feb  4 06:30'
+end_time = 'Feb  4 06:45'
+start_time = datetime.strptime(start_time, "%b %d %H:%M")
+end_time = datetime.strptime(end_time, "%b %d %H:%M")
+mintue = (end_time - start_time).seconds //60
+times = [(start_time + timedelta(minutes=x)).strftime("%b %e %H:%M") 
+     for x in range(mintue+1)]
+logs = Path('/var/log/syslog').read_text().splitlines()
+
+for line in logs:  
+    dtime = ' '.join(line.split()[:3])
+    if ftime() in times:
+        print(line)
