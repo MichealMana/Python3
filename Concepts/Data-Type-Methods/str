@@ -1,0 +1,5 @@
+fmt = '{:18s}'*4
+fn = [i for i in dir(str) if i[0].islower()]
+
+for x in zip(*[iter(fun)] *4):
+    print(fmt.format(*x))
