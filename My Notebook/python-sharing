@@ -1,7 +1,6 @@
 
-How to convert K,M,G from bytes?  --> bisect lib
+
 Check whether a directory is empty or not --> Jan
-Dictionary setdefault, get method --> Jan
 
 How to check whether systemd or init? --> Jan
 How to create a timer in python? --> Jan
@@ -21,7 +20,6 @@ How to fetch last character from string?--> Jan
 How to format sequence string? --> Jan
 How to use zfill in f string format?--Jan
 How to remove all the numbers below 5?-->Jan
-Print Even Numbers --> Feb
 How to print every 3 words per line in a file? --Feb
 How to added line number infront of each line? --> Feb
 How to make columnwise format? -->Feb
@@ -40,3 +38,6 @@ Sum of different length Lists of list --> Posted
 How to fetch last element from list? --> Posted
 How to find inode number of file?--> Posted
 Most common character --> Posted
+How to convert K,M,G from bytes?  --> Posted
+Print Even Numbers --> Posted
+Dictionary setdefault, get method --> Posted
