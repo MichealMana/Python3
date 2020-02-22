@@ -1,0 +1,5 @@
+from pathlib import Path
+
+p = Path('/home/mana/Work').glob('*.html')
+for i in p:
+    i.rename(i.with_suffix('.php'))
