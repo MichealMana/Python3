@@ -1,6 +1,0 @@
-from pathlib import Path
-
-p = Path('/home/mana/Templates')
-for i in p.iterdir():
-    if i.suffix == '.html':
-        i.rename(i.with_suffix('.php'))
