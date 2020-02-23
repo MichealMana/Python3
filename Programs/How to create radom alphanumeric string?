@@ -1,0 +1,5 @@
+
+from string import hexdigits
+from random import choices
+
+print(*choices(hexdigits, k=15), sep = '')
