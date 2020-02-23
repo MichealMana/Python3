@@ -1,0 +1,7 @@
+from pathlib import Path
+
+dpath = Path('/home/mana/Work/')
+files=("red.txt", "rose.sh", "yellow.py", "blue.zsh" )
+
+for i in files:
+    (dpath/i).touch()
