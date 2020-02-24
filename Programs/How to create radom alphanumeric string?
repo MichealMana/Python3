@@ -1,5 +1,4 @@
-
 from string import ascii_letters, digits
 from random import choices
 
-''.join(choices(ascii_letters+digits, k=25))
+''.join(choices(ascii_letters+digits*2, k=25))
