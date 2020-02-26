@@ -1,0 +1,7 @@
+import shutil
+
+methods = [i for i  in dir(shutil) if i[0].islower()]
+fmt = '{:25s}'*4
+
+for fn in zip(*[iter(methods)] *4):
+    print(fmt.format(*fn))
