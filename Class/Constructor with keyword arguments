@@ -1,0 +1,5 @@
+class test:
+    def __init__(self, **kwargs):
+        print(kwargs)
+        
+t1 = test(name = 'Ram')
