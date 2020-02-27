@@ -1,0 +1,4 @@
+from pathlib import Path
+
+log = Path('/var/log/syslog').read_text().splitlines()
+[i for i in log if 'CRON'.casefold() in i]
