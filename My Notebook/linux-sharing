@@ -1,6 +1,10 @@
 
+Extract specific Error message with Timestamp --> Feb
 last reboot -->Jan
-Extract log in specified range of time --> Feb
+
+echo -e "\x44"
+$ echo {1..5}0
 
 
-How to count number unique lines in a file? --> Posted
+
+How to count unique lines in a file? --> Posted
