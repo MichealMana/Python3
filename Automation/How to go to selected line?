@@ -1,0 +1,7 @@
+from itertools import count
+from pathlib import Path
+
+line_no = int(input('Enter line number: '))
+file = Path('/home/mana/Work/data.txt').read_text().splitlines()
+fetch = [i[1] for i in list(zip(count(1), file)) if i[0] == line_no]
+print(*fetch)
