@@ -1,3 +1,11 @@
+## Methos:1 ##
+m = lst[0]
+for i in lst:
+    if i > m:
+        m = i
+print(m)
+
+## Methos:2 ##
 lst = [3, 11, 1, 2, 4, 3, 5, 7, 6, 3]
 
 for i in range(len(lst) -1):
