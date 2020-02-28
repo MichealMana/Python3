@@ -1,0 +1,23 @@
+file.txt
+234
+243
+324
+342
+423
+432
+
+Program:
+from pathlib import Path
+
+line = Path('/home/mana/Work/reverse.txt').read_text().splitlines()
+
+for i in line:
+    if i[::-1] in line:
+        line.remove(i[::-1])
+        
+print(*line, sep = '\n')
+
+Output:
+234
+243
+324
