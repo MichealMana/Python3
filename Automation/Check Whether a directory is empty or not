@@ -1,0 +1,1 @@
+print(len(os.listdir('/home/mana/Documents')) == 0 and 'Empty' or 'Not Empty')
