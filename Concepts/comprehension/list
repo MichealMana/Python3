@@ -2,3 +2,7 @@
 
 lst = [[1, 4, 5], [7, 3], [4], [46, 7, 3]] 
 [y for x in lst for y in x]
+
+##EX:2
+
+st = '6MoCafgjl7WVaxTO5zyfW_qdldg'
