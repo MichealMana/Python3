@@ -1,0 +1,19 @@
+
+
+class A:
+    def __init__(self):
+        print(1)
+    def __new__(self):
+        print (2)
+obj1 = A()
+
+
+********************************
+
+class A:
+    def __init__(self):
+        print(1)
+    def __new__(self):
+        print (2)
+        
+A()
