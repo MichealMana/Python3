@@ -1,5 +1,6 @@
+from datetime import date
+from pathlib import Path
 
-import os
-from time import ctime
-
-print(ctime(os.stat('/boot')[-1]))
+P = Path('/boot/')
+kernel = max([i.name for i in P.iterdir() if str(i.name).startswith('vml')])
+print(kernel, date.fromtimestamp((P/kernel).stat().st_mtime).strftime("%D"))
