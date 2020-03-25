@@ -1,0 +1,13 @@
+from socket import gethostname
+from itertools import groupby
+from pathlib import Path
+from re import search
+
+node = gethostname()
+file = Path('/var/log/syslog').read_text().splitlines()
+match_lines = [search(r''+node+'.*$', i).group() for i in file]
+line_cnt = {x: len(list(y)) for x, y in groupby(sorted(match_lines))}
+line_sort = sorted(line_cnt.items(), key = lambda x: x[1])[-5:][::-1]
+
+for error, n in line_sort:
+    print(n, error)
