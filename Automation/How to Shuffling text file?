@@ -1,0 +1,6 @@
+from random import shuffle
+from pathlib import Path
+
+lines = Path('/home/mana/Work/data.txt').read_text().splitlines()
+shuffle(lines)
+print(*lines, sep = '\n')
