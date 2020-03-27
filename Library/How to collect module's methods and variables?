@@ -1,3 +1,16 @@
+Method:1
+import secrets
+
+methods = [i for i  in dir(secrets) if not i.startswith('_')  
+           and callable(getattr(secrets,i))]
+
+fmt = '{:15s}'*4
+
+for fn in zip(*[iter(methods)] *4):
+    print(fmt.format(*fn))   
+
+****************************************************************
+Method:2
 import string
 
 d = [i for i in dir(string) 
@@ -15,3 +28,5 @@ print('*'*47)
 for x in d:
     if callable(getattr(string, x)):
         print(x)
+
+**********************************************************
