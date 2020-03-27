@@ -1,0 +1,17 @@
+from pathlib import Path
+import uuid
+
+P = Path('/etc/fstab').read_text().splitlines()
+cuuid = [i.split()[0] for i in P if i.split()[0].startswith('UUID') 
+         and i.split()[1] == '/']
+UUID = uuid.UUID(cuuid[0].replace('UUID=', ''))
+print('My Root Partition UUID:', UUID)
+
+print('UUID.version :', UUID.version)
+print('UUID.fields  :', UUID.fields)
+print('UUID.time_low            : ', UUID.time_low)
+print('UUID.time_mid            : ', UUID.time_mid)
+print('UUID.time_hi_version     : ', UUID.time_hi_version)
+print('UUID.clock_seq_hi_variant: ', UUID.clock_seq_hi_variant)
+print('UUID.clock_seq_low       : ', UUID.clock_seq_low)
+print('UUID.node                : ', UUID.node)
