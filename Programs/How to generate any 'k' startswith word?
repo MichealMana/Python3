@@ -1,0 +1,9 @@
+from pathlib import Path
+from secrets import choice
+
+words = Path('/usr/share/dict/words').read_text().splitlines()
+while True:
+    word = choice(words)
+    if word.startswith('k'):
+        print(word)
+        break
