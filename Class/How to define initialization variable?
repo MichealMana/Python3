@@ -4,3 +4,11 @@ class A(object):
         print(self.C) 
         
 A()
+
+***********************************
+Show attribute:
+class A(object): 
+    def __init__(self): 
+        self.name = "Manavalan" 
+        
+A().__dict__
