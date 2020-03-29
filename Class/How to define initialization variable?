@@ -1,0 +1,6 @@
+class A(object): 
+    def __init__(self): 
+        self.C = "Python" 
+        print(self.C) 
+        
+A()
