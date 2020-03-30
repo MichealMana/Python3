@@ -1,0 +1,27 @@
+set1 = {"blue", "yellow", "green"}
+set2 = {'orange', 'grey', 'black'}
+merge_set = set1 | set2
+print(merge_set)
+
+# Check set1 whether subset of merge_set
+print(set.issubset.__doc__)
+print(set1.issubset(merge_set))
+
+# Check two set haven't same element
+print(set.isdisjoint.__doc__)
+print(set1.isdisjoint(set2))
+
+# Check whether this set contains another set.
+print(set.issuperset.__doc__)
+print(merge_set.issuperset(set1))
+print(merge_set.issuperset(set2))
+
+Output:
+{'green', 'orange', 'grey', 'blue', 'yellow', 'black'}
+Report whether another set contains this set.
+True
+Return True if two sets have a null intersection.
+True
+Report whether this set contains another set.
+True
+True
