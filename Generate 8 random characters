@@ -1,6 +1,0 @@
-from string import printable
-from random import choice
-
-ch = printable[:68]+printable[71:73]+printable[82:84]
-rdm = [choice(ch) for i in range(8)]
-''.join(rdm)
