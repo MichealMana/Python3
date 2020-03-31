@@ -1,9 +1,0 @@
-try:
-  phone_number = int(input('Enter phone number:'))
-  if len(str(phone_number)) == 10:
-    print('Valid')
-  else:
-    print('Not Valid')
-except:
-  print('Enter integer number only')
- 

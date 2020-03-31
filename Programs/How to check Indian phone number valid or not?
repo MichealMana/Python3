@@ -1,0 +1,7 @@
+phone_number = input('Enter 10 digit phone number:')
+
+if phone_number.isdigit() and len(phone_number) == 10:
+    print('Valid')
+else:
+    print('Not Valid')
+    
