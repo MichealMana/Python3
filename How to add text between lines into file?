@@ -1,7 +1,0 @@
-
-with open('/home/joe/Temp/file1.txt','r') as opn:
-    reads = opn.readlines()
-    reads.insert(1,'This is another line\n')
-with open('/home/joe/Temp/file1.txt','w') as opn:
-    text = ' '.join(reads)
-    opn.write(text)       
