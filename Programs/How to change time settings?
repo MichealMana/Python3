@@ -1,7 +1,7 @@
 from datetime import datetime as dat
 
-# Before Change
-print(dat.now().strftime('%H:%M:%S')) 
+print('Before Change:', end = ' ')
+print(f'{dat.now().strftime("%H:%M:%S")}') 
 
-# After Change
+print('After Change:', end = ' ')
 print(dat.now().replace(minute = 35).strftime('%H:%M:%S'))    
