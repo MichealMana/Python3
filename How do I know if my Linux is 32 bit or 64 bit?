@@ -1,6 +1,0 @@
-import os
-
-if os.uname()[-1] == 'x86_64':
-    print('This System powerd by 64 Bit.')
-else:
-    print('This System powerd by 32 Bit.')
