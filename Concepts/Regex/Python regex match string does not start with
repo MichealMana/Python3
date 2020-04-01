@@ -1,0 +1,7 @@
+You could use a negative look-ahead
+
+from pathlib import Path
+from re import findall
+
+file_read = Path('/etc/ssh/ssh_config').read_text().splitlines()
+[findall(r'^(?:#).*', i) for i in file_read]
