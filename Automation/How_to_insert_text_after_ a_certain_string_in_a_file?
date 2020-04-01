@@ -1,0 +1,8 @@
+from pathlib import Path
+
+fr = Path('/home/mana/Work/fruit.txt').read_text().splitlines()
+for i,j in enumerate(fr):
+    if 'Banna' in j:
+        fr.insert(i+1, 'Mango') 
+        
+print(*fr, sep = '\n')
