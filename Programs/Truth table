@@ -1,0 +1,16 @@
+a = [True, False]
+b = [True, False]
+
+print("AND:")
+for i in a:
+    for j in b:
+        print(i,'and', j,'=',i and j)
+print('*'*25)
+print("OR:")
+for i in a:
+    for j in b:
+        print(i,'or',j,'=',i or j)
+print('*'*25)
+print("NOT:")
+for i in a:
+    print('Not',i,'=',not i)
