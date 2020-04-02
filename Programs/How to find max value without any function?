@@ -1,0 +1,7 @@
+lst = [ 1 , 3, 5, 6, 2 ]
+m = lst[0]
+
+for i in lst:
+    if i > m:
+        m = i
+m
