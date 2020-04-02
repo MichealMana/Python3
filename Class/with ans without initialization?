@@ -1,0 +1,18 @@
+With initialization:
+class display:
+    def __init__(self, name):
+        self.name = name
+    
+    def hello(self):
+        print('Hi', self.name)
+        
+d1 = display('Manavalan')
+d1.hello()
+
+Without initialization:
+class display:
+    def hello(self, name):
+        print('Hi', name)
+        
+d1 = display()
+d1.hello('Mana')
