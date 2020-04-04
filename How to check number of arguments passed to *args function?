@@ -1,6 +1,0 @@
-def fn(*args):
-    print(len(args),'\n')
-    for i in range(len(args)):
-        print(str(i)+'.'+str(args[i]))
-
-fn('a', 'b', 'c')
