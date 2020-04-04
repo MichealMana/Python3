@@ -1,5 +1,8 @@
-from pathlib import Path
+import csv
 
-P = Path('/etc/passwd').read_text().splitlines()
-comma = [i.replace(':',',') for i in P]
-print(*comma,sep='\n',file = open('/home/mana/Work/user.csv','w'))
+with open('/etc/passwd', newline = '') as prfile, open('/home/mana/Work/pass.csv', 'w') as pwfile:
+    csvreader = csv.reader(prfile, delimiter = ':')
+    writer = csv.writer(pwfile, delimiter = ',',quoting = csv.QUOTE_MINIMAL)
+    
+    for x in csvreader:
+        writer.writerow(x)    
