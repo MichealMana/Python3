@@ -1,0 +1,11 @@
+from pathlib import Path
+import csv
+
+dir_path = Path('/home/mana/Work')
+name = (dir_path/'name.txt').read_text().splitlines()
+age = (dir_path/'age.txt').read_text().splitlines()
+csv_info = list(zip(name,age))
+
+with open('/home/mana/Work/data.csv', 'w') as csvfile:
+    writer = csv.writer(csvfile, delimiter = ',')
+    writer.writerows(csv_info)
