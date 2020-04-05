@@ -1,3 +1,15 @@
+Method: 1
+import csv
+
+with open('/etc/passwd', newline = '') as passfile:
+    reader = csv.reader(passfile, delimiter = ':')
+    with open('password.csv', 'w', newline = '') as wpass:
+        writer = csv.writer(wpass, delimiter = ',')
+        writer.writerows(reader)
+        
+*************************************************************************************************
+Method: 2
+
 import csv
 
 with open('/etc/passwd', newline = '') as prfile, open('/home/mana/Work/pass.csv', 'w') as pwfile:
