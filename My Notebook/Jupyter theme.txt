@@ -1,0 +1,5 @@
+Black and Green:
+jt -t monokai -f roboto -fs 11 -ofs 105 -cellw 850 -lineh 100 -T -m 100 -tfs 10
+
+White and Shadow:
+jt -t grade3 -f roboto -fs 11 -ofs 105 -cellw 850 -lineh 100 -T -m 100 -tfs 10
