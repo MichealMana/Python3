@@ -1,0 +1,15 @@
+from pathlib import Path
+from re import search
+import csv
+
+file_read = Path('/etc/services').read_text().splitlines()
+services = [i.replace('\t', ' ').rpartition('/tcp')[0].split()
+        for i in file_read if search(r'/tcp', i)]
+
+with open('services.csv', 'w', newline = '') as file:
+    fieldnames = ['Services', 'Port']
+    wrih = csv.DictWriter(file, fieldnames)
+    wrih.writeheader()
+    wrir = csv.writer(file, delimiter = ',', 
+                      quoting = csv.QUOTE_NONE)
+    wrir.writerows(services)    
