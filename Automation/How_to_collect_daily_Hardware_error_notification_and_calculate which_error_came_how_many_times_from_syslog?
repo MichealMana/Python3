@@ -1,0 +1,27 @@
+from itertools import groupby
+from pathlib import Path
+from re import search
+import csv
+
+logfile = Path('/var/log/syslog').read_text().splitlines()
+hard_error = [text for text in logfile if 'kernel' in text 
+              and 'error:' in text]
+error_list = []
+for x in hard_error:
+    match = search(r'(\w{3}\s{1,2}\d{1,2}).*(\].*error.*)',x)
+    if match:
+        error_list.append((match.group(1), 
+                           match.group(2).replace(']','')))
+        
+errors = [[''.join(e), len(list(n))] for e, n in 
+          groupby(sorted(error_list))]
+print(errors)
+
+## If you want store as report in CSV format, Use below program.
+log_data = [(' '.join(date[0].split()[:2]), ' '.join(date[0].split()[2:]),
+             date[1]) for date in errors]
+
+with open('/home/mana/Work/log_report.csv', 'w', newline = '') as logcsv:
+    writer = csv.writer(logcsv, quoting = csv.QUOTE_MINIMAL)
+    writer.writerows(log_data)
+   
