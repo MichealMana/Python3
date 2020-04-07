@@ -1,0 +1,4 @@
+from pathlib import Path
+
+dir_list = Path('/home/mana/').rglob('Work/*')
+'test' in  [i.name for i in dir_list if i.is_dir()]
