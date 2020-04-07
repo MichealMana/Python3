@@ -1,5 +1,0 @@
-import os
-
-f = os.walk('/home/mana/Public')
-if ['test'] in sum([*f], ()):
-    print('"Test" directory exists')
