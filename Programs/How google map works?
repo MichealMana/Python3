@@ -1,17 +1,23 @@
+Google Maps developed by Python
+
+What is Latitude and Longitude?
+Latitude and Longitude are the units that represent the coordinates at geographic
+coordinate system.
+
+Latitudes and longitudes are horizontal and vertical lines respectively.
+Latitudes are parellel to equator and equator itself is also a latitude i.e. 0° Latitude.
+Longitude intersects with equator at 90
+
+*************************************************************************
+
 import bisect 
 
-a = [[85.319769, 27.7545],
-[85.328429, 27.7495],
-[85.329873, 27.742],
-[85.337089, 27.7445],
-[85.347193, 27.757],
-[85.34142, 27.772],
-[85.329873, 27.772],
-[85.321212, 27.767],
-[85.319769, 27.7545]]
+lati_long = [[], [20.5937,78.9629], [37.0902,95.7129], 
+             [52.1326,5.2913], [55.3781, 3.4360]]
+country = ['', 'India', 'USA', 'Netherlands', 'UK']
 
-def chk(arg):
-    idx = bisect.bisect(a, arg)
-    return idx
+def map(arg):
+    idx = bisect.bisect(lati_long, arg) -1
+    return f'Latitude {arg[0]}, Longitude {arg[1]} is {country[idx]}'
 
-chk([85.3211, 27.7522])
+map([55.3781, 3.4360])
