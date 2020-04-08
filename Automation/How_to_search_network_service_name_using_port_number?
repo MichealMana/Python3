@@ -1,17 +1,8 @@
-
 from pathlib import Path
 import re
 
+port = input('Enter Port Number:')
 file_read = Path('/etc/services').read_text().splitlines()
-tcpl = [i.replace('\t', ' ').rpartition('/tcp')[0].split()
-        for i in  file_read if re.search(r'/tcp', i)]
-port_dict = {int(no): na  for na, no in tcpl}
-
-def chk(pno):
-    if pno in port_dict:
-        print(pno,'-->', port_dict[pno])
-    else:
-        print(pno, '-->', port_dict.get(pno,'Port not Available.'))
-
-inp = int(input('Enter Port Number:'))
-chk(inp)
+service = [i.split('\t')[0] for i in file_read 
+ if re.search(r'\s'+port+'/tcp',i)]
+print(f'{port} --> {service[0]}')
