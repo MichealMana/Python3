@@ -1,0 +1,15 @@
+Here I explain How Google Transliteration convert English charcters("i") to Tamil("ஐ").
+
+### Map unicode point English character(i) to Tamil unicode point('ஐ')  ###
+
+trans_table = {105: 0xb90}
+
+### Now Transliterate from i to ஐ  ###
+
+value = input('Enter Character: ')
+result = value.translate(trans_table)
+print(f'{value} transliterate to {result}.')
+
+### This is dirctely mapped to character. ####
+dict = str.maketrans('i', 'ஐ')
+print(dict)
