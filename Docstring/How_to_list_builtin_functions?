@@ -1,0 +1,8 @@
+import builtins
+
+functions = [i for i in dir(builtins) 
+             if i[0].islower()]
+fmt = '{:13s}'*6
+
+for fn in zip(*[iter(functions)] *6):
+    print(fmt.format(*fn))
