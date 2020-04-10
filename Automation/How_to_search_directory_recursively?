@@ -1,0 +1,7 @@
+from pathlib import Path
+
+mydir = input('Enter Search Directory:')
+dir_list = Path('/home/mana/').rglob('Work/*')
+only_dir = [i.name for i in dir_list if i.is_dir()]
+if mydir in only_dir:
+    print(f'"{mydir}" Directory exists.')
