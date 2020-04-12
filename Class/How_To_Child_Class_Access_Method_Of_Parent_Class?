@@ -1,0 +1,15 @@
+class A:
+    def test1(self):
+        return 'Hi Good Morning.'
+    
+class B:
+    def test2(self):
+        return 'Hi Good Night.'
+    
+class C(A,B):
+    pass
+    
+
+hello = C()
+print(hello.test1())
+print(hello.test2())
