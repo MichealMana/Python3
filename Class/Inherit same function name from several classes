@@ -1,0 +1,17 @@
+class A:
+    def test(self):
+        print('Hi Good Morning.')
+    
+class B:
+    def test(self):
+        print('Hi Good Evening.')
+    
+class C(A,B):
+    def test(self):
+        A.test(self)
+        B.test(self)
+        print('Hi Good Night.')
+    
+
+hello = C()
+hello.test()
