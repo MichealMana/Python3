@@ -1,12 +1,12 @@
 from datetime import datetime
 from pathlib import Path
 
-start_day = datetime.strptime('08/4/2020 00', "%d/%m/%Y %H")
-end_day = datetime.strptime('10/4/2020 00', "%d/%m/%Y %H")
+start_day = datetime.strptime('08/4/2020 00',"%d/%m/%Y %H")
+end_day = datetime.strptime('10/4/2020 00',"%d/%m/%Y %H")
 files = Path('/home/mana/Work/')
 ftime = [(datetime.fromtimestamp(i.stat()[-2]),i) 
-         for i in files.iterdir()]
+         for i in files.iterdir() if i.is_file()]
 
 for x,y in ftime:
     if start_day < x < end_day:
-        print(f'{x} ==> {y}')
+        print(f'{x:%d-%m-%Y} => {y}')
