@@ -1,8 +1,0 @@
-import pwd
-
-nologin_user = [i.pw_name for i in pwd.getpwall() 
-                if i.pw_shell.endswith('nologin')]
-fmt = '{:17s}'*5
-
-for user in zip(*[iter(nologin_user)] *5):
-    print(fmt.format(*user))
