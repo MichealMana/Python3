@@ -1,7 +1,0 @@
-from uuid import getnode
-from re import findall
-
-node_mac = f'{getnode():x}'
-print('Orginal MAC Address =>',node_mac)
-mac = ':'.join(findall(r'..',node_mac))
-print('Converted MAC Address =>', mac)
