@@ -1,6 +1,0 @@
-from pathlib import Path
-
-file_path = Path('/home/mana/Work/')
-file_read = (file_path/'fruit.txt').read_text().splitlines()
-file_read.insert(3, 'Bannana')
-print(*file_read, sep = '\n', file = open('/home/mana/Work/fruit.txt', 'w'))
