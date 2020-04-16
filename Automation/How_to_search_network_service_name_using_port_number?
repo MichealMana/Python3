@@ -1,8 +1,0 @@
-from pathlib import Path
-import re
-
-port = input('Enter Port Number:')
-file_read = Path('/etc/services').read_text().splitlines()
-service = [i.split('\t')[0] for i in file_read 
- if re.search(r'\s'+port+'/tcp',i)]
-print(f'{port} --> {service[0]}')
