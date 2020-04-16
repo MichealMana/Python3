@@ -1,7 +1,0 @@
-from pathlib import Path
-
-dir_path = Path('/home/mana/Work')
-name = (dir_path/'name.txt').read_text().splitlines()
-age = (dir_path/'age.txt').read_text().splitlines()
-for i,j in zip(name,age):
-    print(f'{i:12}{j}')
