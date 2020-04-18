@@ -1,0 +1,18 @@
+
+[21, 7,170] > [21, 7,167]
+
+**********************************
+
+from itertools import zip_longest
+
+L1 = [21, 7, 170]
+L2 = [21, 7, 167]
+pack = zip_longest(L1, L2, fillvalue = 0)
+
+def com(*args):
+    for i,j in args:
+        if i > j:
+            return True
+    return False
+        
+com(*pack)
