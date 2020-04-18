@@ -1,0 +1,4 @@
+S = 'AAAAaaBCCCDDe'
+uni = {x: S.count(x) for x in S}
+for m, n in uni.items():
+    print(m+str(n), end = '')
