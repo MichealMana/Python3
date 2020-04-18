@@ -1,0 +1,6 @@
+string_list = ['Rani', "Lawerence", 'Ram', 'Xavier', 'Veena', 'Rex']
+def start(a, *string_list):
+    return [i for i in string_list if i.startswith(a)]
+
+
+start('R', *string_list)
