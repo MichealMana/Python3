@@ -1,0 +1,7 @@
+from sys import exc_info
+
+name = ''
+try:
+    name[0] = 'P'
+except:
+    print(exc_info()[1])
