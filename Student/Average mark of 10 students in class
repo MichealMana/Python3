@@ -1,0 +1,11 @@
+
+
+student_mark = [80, 90, 80, 70, 75, 65, 88, 95, 89, 7]
+sum(student_mark)/len(student_mark)
+
+**********************************************
+student_mark = [80, 90, 80, 70, 75, 65, 88, 95, 89, 7]
+temp = 0
+for i in student_mark:
+    temp += i
+print(temp/len(student_mark))
