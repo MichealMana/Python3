@@ -1,7 +1,0 @@
-
-import builtins
-import re
-
-fn = [ i for i in dir(builtins)  if re.match(r'^[a-z]',i) ]
-for j,k,l,m in zip(*[iter(fn)] *4):
-    print('{:15} {:15} {:15} {:15}'.format(j, k, l,m))
