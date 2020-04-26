@@ -1,0 +1,10 @@
+L1 = [2, 3, 6, 8, 9]
+L2 = [1, 5, 7, 4, 12]
+[x + y for x, y in zip(L1, L2)]
+
+******************************
+from operator import add
+
+L1 = [2, 3, 6, 8, 9]
+L2 = [1, 5, 7, 4, 12]
+[add(x, y) for x, y in zip(L1, L2)]
