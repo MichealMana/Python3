@@ -1,0 +1,17 @@
+
+
+Docker Install Jupyter  Notebook:
+https://hub.docker.com/r/ipython/notebook
+
+Docker Start Notebook:
+docker run --rm -it -p 8888:8888 -v "$(pwd):/notebooks" jupyter/notebook
+
+Tip: if you want to download other images, such as the Data Science Notebook that has been mentioned above, you just have to replace the "Jupyter/notebook" bit by the Repository name you find in the Docker Image Library, such as "Jupyter/datascience-notebook".
+
+
+Theme:
+Black and Green:
+jt -t monokai -f roboto -fs 11 -ofs 105 -cellw 850 -lineh 100 -T  -P -m 100 -tfs 10
+
+White and Shadow:
+jt -t grade3 -f roboto -fs 11 -ofs 105 -cellw 850 -lineh 100 -T -P -m 100 -tfs 10
