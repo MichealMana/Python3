@@ -1,0 +1,15 @@
+from itertools import zip_longest
+
+d1 = {'msg1': [{1: 'a'}, {2: 'b'}, {3: 'c'}]}
+d2 = {'msg2': [{1: 'a'}, {2: 'd'}, {5: 'd'}]}
+
+ld1 = d1.get('msg1')
+ld2 = d2.get('msg2')
+for x,y in list(zip_longest(ld1, ld2, fillvalue = None)):
+    if x != y:
+        print(y)
+        
+        
+ Out:
+{2: 'd'}
+{5: 'd'}
