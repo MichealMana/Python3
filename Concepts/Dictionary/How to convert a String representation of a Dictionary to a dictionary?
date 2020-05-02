@@ -1,0 +1,13 @@
+
+S = "{'1': 1, '2': 2, '3': 3}"
+eval(S)
+
+*************************************
+
+Abstract Syntax Tree (ast) module of Python has literal_eval() method which safely evaluates
+valid Python literal structure.
+
+from ast import literal_eval
+
+S = "{'1': 1, '2': 2, '3': 3}"
+literal_eval(S)
