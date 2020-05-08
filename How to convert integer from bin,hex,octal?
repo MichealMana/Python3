@@ -1,3 +1,0 @@
-print('From Binary:',int(0b1011010))
-print('From Hex:',int(0x5A))
-print('From Oct:',int(0o132))
