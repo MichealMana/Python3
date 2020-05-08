@@ -1,3 +1,0 @@
-for i in dir(list)[-11:]:
-    print((eval('list.'+i)).__doc__)
-    print('*'*50)
