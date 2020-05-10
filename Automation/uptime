@@ -1,6 +1,0 @@
-from pathlib import Path as Pa
-from datetime import timedelta
-
-u = Pa('/proc/uptime').read_text().split()[0]
-t = timedelta(seconds = float(u))
-print(str(t).rpartition(':')[0])
