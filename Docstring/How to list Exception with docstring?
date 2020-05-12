@@ -1,8 +1,0 @@
-import builtins
-import re
-
-for i in dir(builtins):
-    if re.match(r'^[A-Z]',i):
-        if not re.match(r'^(None|False|True)', i):
-            print(i,'-->',getattr(builtins,i).__doc__)
-            print('*'*80)
