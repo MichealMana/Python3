@@ -1,5 +1,0 @@
-from pathlib import Path
-
-p = Path('/home/mana/Must Study/Python')
-fl = [ ++i[0] for i in enumerate(p.iterdir())]
-len(fl)
