@@ -1,5 +1,0 @@
-from pathlib import Path
-
-p = '/home/mana/Work Area/'
-for i in range(1,6):
-    Path(p+'test'+str(i)+'.txt').touch()
