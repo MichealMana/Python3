@@ -1,7 +1,6 @@
-import shutil
-
-methods = [i for i  in dir(shutil) if i[0].islower()]
-fmt = '{:25s}'*4
+methods = [i for i  in dir(str) if i[0].islower()]
+w = str(len(max(methods, key=len))+2)
+fmt = ('{:'+w+'s}')*4
 
 for fn in zip(*[iter(methods)] *4):
     print(fmt.format(*fn))
