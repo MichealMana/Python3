@@ -1,8 +1,0 @@
-#!/usr/bin/python3
-import pwd
-
-users = pwd.getpwall()
-print('{:^16} {:^5} {:^20}'.format('USER', 'UID', 'SHELL'))
-for user in users:
-    if user.pw_uid >= 1000 and user.pw_shell == '/bin/bash':      
-        print('{:>10} {:>10} {:>15}'.format(user.pw_name, user.pw_uid, user.pw_shell))
