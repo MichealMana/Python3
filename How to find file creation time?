@@ -1,5 +1,0 @@
-import os
-import time
-
-create = os.stat('/home/mana/Work/file1.txt').st_ctime
-time.ctime(create)
